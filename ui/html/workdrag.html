@@ -1,0 +1,195 @@
+<html>
+    <head>
+    <style>
+.c1
+{
+    
+    height:300px;
+    width:610px;
+    border:1px solid black;
+    
+}
+.c2
+{
+    height:100px;
+    width:610px;
+}
+  .c3
+ {
+     display:inline-block;
+    height:100px;
+    width:200px;
+    
+ }
+ .c4
+ {
+    display:inline-block;
+    height:100px;
+    width:200px;
+   
+     background-color: orange;
+ }
+ .c5
+ {
+    display:inline-block;
+    height:100px;
+    width:200px;
+    
+     background-color: white;
+ }
+ .c6
+ {
+    display:inline-block;
+    height:100px;
+    width:200px;
+   
+     background-color: green;
+ }
+ 
+ .chakra{
+ width: 96px;
+ height: 96px;
+ border:2px solid blue;
+ border-radius: 50%;
+ margin: auto;
+ }
+
+ .chakra li{
+ list-style: none;
+ width: 94px;
+ border: 1px solid blue;
+ position: relative;
+ }
+
+ li:nth-child(1){
+ top: 47px;
+ }
+
+ li:nth-child(2){
+ top: 45px;
+ transform: rotate(90deg);
+ }
+
+ li:nth-child(3){
+ top: 43px;
+ transform: rotate(15deg);
+ }
+
+ li:nth-child(4){
+ top: 41px;
+ transform: rotate(30deg);
+ }
+
+ li:nth-child(5){
+ top: 39px;
+ transform: rotate(45deg);
+ }
+
+ li:nth-child(6){
+ top: 37px;
+ transform: rotate(60deg);
+ }
+
+ li:nth-child(7){
+ top: 35px;
+ transform: rotate(75deg);
+ }
+
+ li:nth-child(8){
+ top: 33px;
+ transform: rotate(105deg);
+ }
+ li:nth-child(9){
+ top: 31px;
+ transform: rotate(120deg);
+ }
+
+ li:nth-child(10){
+ top: 29px;
+ transform: rotate(135deg);
+ }
+ li:nth-child(11){
+ top: 27px;
+ transform: rotate(150deg);
+ }
+
+ li:nth-child(12){
+ top: 25px;
+ transform: rotate(165deg);
+ }
+ 
+ 
+    </style>
+</head>
+<body>
+    <center>
+    <div class="c1" style="border:1px solid black; padding:5px; margin-top:20px;" ondrop="drop(event)" ondragover="allowDrop(event)" >
+        <div class="c2"    >
+        <div class="c3" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="c3" id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="c3" id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div >
+        <div class="c2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="c3" id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="c3" id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="c3" id="div7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class="c2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="c3" id="div8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="c3" id="div9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="c3" id="div10" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </div>
+       
+    </div>
+
+    <div class="c1" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:1px solid black; padding:5px; margin:20px;display:inline-block;" >
+        <div class="c2">
+        <div class="c4" draggable="true" ondragstart="drag(event)" id="drag1"></div>
+        <div class="c6" draggable="true" ondragstart="drag(event)" id="drag2"></div>
+        <div class="c5" draggable="true" ondragstart="drag(event)" id="drag3"></div>
+        </div >
+        <div class="c2">
+            <div class="c6"draggable="true" ondragstart="drag(event)" id="drag4"></div>
+            <div class="c5">
+            <div class="chakra " draggable="true" ondragstart="drag(event)" id="drag5" >
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </div>
+        </div>
+            <div class="c4" draggable="true" ondragstart="drag(event)" id="drag6"></div>
+            </div>
+            <div class="c2">
+                <div class="c5" draggable="true" ondragstart="drag(event)" id="drag7"></div>
+                <div class="c4" draggable="true" ondragstart="drag(event)" id="drag8"></div>
+                <div class="c6" draggable="true" ondragstart="drag(event)" id="drag9"></div>
+                </div>
+       
+    </div>
+</center>
+    <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+        </script>
+</body>
+    </html>

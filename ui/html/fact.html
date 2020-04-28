@@ -1,0 +1,32 @@
+<html>
+<head>
+
+</head>
+<body>
+Enter Num: <input id="num" name="num">
+<button onclick="fact(event)">Factorial</button>
+<span id="answer"></span>
+
+
+<script>
+    function fact(n){
+    
+    var i, n, fact;
+   
+   // n=Number(document.getElementById("num").value);
+    if (n=== 0)
+ {
+    return 1;
+ }
+
+ else{
+  return n * fact(n-1);
+         
+}
+
+    document.getElementById("answer").value=n;
+    }
+    console.log(fact(5));
+    </script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<html>
+
+  <head>
+
+    <title>Arwizon Website</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <style>
+     
+
+
+
+    
+
+      body {
+            font-family: Calibri;
+            box-sizing:border-box;
+        }
+
+        header > div {
+            z-index: 100;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: white;
+        }
+
+        header figure {
+            margin: 1.5% 0% 1.5% 4%;
+        }
+
+        header > div > ul {
+            display: inline-block;
+            float:right;
+            margin-top:1%;
+            
+            
+        }
+
+            header > div > nav > div {
+                display: inline-block;
+                margin-left: 10px;
+                padding-top: 22px;
+            }
+
+      
+          
+        header a:hover{
+            color: blue;
+            text-decoration: none;
+        }
+        header span:hover {
+            color: orange;
+        }
+         input[type="button"] {
+         transition:transform 1s;
+         border-radius:1rem;
+         padding:1% 4%;
+        }
+             input[type="button"]:hover{
+            transform:scale(1.2,1.2);
+        }
+        #carouselExampleIndicators{
+            margin-top:5%;
+        }
+
+        div b{
+            color:white;
+            text-decoration:black;
+            font-weight: bold;
+            font-size: 100%;
+
+        }
+       
+        .imageText {
+            font-size: 50px;
+            color:#1f0a44;
+            left: 20px; 
+            position: relative;
+           
+          }
+        #img2
+        {
+            opacity:0;
+           transition:opacity 1000ms;
+        }
+        #img1:hover #img2
+        {
+            opacity:1;
+        }
+        .a{
+        border-radius: 25px;
+         background:white;
+          border:1px solid lightskyblue;
+           padding:5%;
+           
+            margin:10px;
+        }
+        .st1{
+            width: 100%;
+            position: relative;
+            top: 10px;
+            background-color: black;
+            padding-left:200px;
+            padding-top:50px;
+            padding-bottom:50px;
+            padding-right:200px;
+        }
+        footer p{
+            font-size:28px;
+            background-color:black;
+        }
+            .st2 {
+                float: left;
+                width: 20%;
+                display: inline-block;
+                background-color:black;
+                color: white;
+            }
+            .cardsection
+            {
+                align-content: center;
+                padding:10px;
+            }
+
+
+    </style>
+  </head>
+  <body  onload="timeCounter()">
+    <div class="container-fluid" style="padding:0px;"  >
+        <header>
+            <nav class="navbar navbar-expand-md navbar-light bg-light" >
+                <a href="#" class="navbar-brand">
+                    <figure class="figure"><img class="figure-img img-fluid" src="../images/newlogo.png" height="28" alt="CoolBrand"></figure>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <div class="navbar-nav ml-auto"></div>
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:navy;font-size: 20px;
+                                font-weight: bold;
+                                  text-decoration: none;"
+                             href="../html/homejs.html"><span>Home</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  style="color:navy;font-size: 20px;
+                                font-weight: bold;
+                                  text-decoration: none;"
+                            href="#services"><span>Services</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:navy;font-size: 20px;
+                                font-weight: bold;
+                                  text-decoration: none;"
+                             href="../html/formfinal.html"><span>Registration</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:navy;font-size: 20px;
+                                font-weight: bold;
+                                  text-decoration: none;"
+                             href="#"><span>Portfolio</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:navy;font-size: 20px;
+                                font-weight: bold;
+                                  text-decoration: none;"
+                             href="#about"><span>About</span></a>
+                            
+                           
+                         
+                        </ul>
+                      
+                    </div>
+                  
+                </div>
+                <span id="count" style="float:right; position: relative;; top:0;"></span> <br>
+                <span id=count1></span> 
+            </nav>
+            </header>
+            
+          
+              
+            <div  align="center">
+             <div class="card" style="display:inline-block;background-size: cover;background-color: #81d4fa;color:black; height:50%;width:20%; margin:3%;">
+                          
+                          <div class="card-body">
+                            <h5 class="card-title" style="background-color:black;color:white; height:50px;">FrontEnd Developer</h5>
+                           
+                            <p class="card-text" > Experience:0-5 years<br>
+                             Salary:3LPA</p>
+                            <b> <p id="demo" style="font-size: 20px;color:red"></p></b>
+                            
+                            <button type=button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Apply Now!</a>
+                          </div>
+                        </div>
+                  </div>
+                
+  
+              <div id="myModal" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+              
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h4 class="modal-title">Application Form</h4>
+                              
+                              <button type="button" class="close" data-dismiss="modal">×</button>
+                             
+                          </div>
+                          <div class="modal-body">
+                            
+                              <form role="form" method="post" id="reused_form">
+                                <div class="form-group">
+                                  <label for="email">
+                                      Name:
+                                  </label>
+                                  <input type="text" class="form-control" 
+                                         id="name" name="name" required maxlength="50">
+                              </div> 
+                              <div class="form-group">
+                                <label for="email">
+                                    Contact Number:
+                                </label>
+                                <input type="text" class="form-control" 
+                                       id="num" name="num" required maxlength="50">
+                            </div> 
+              
+                                 
+                                  <div class="form-group">
+                                      <label for="email">
+                                          Email:
+                                      </label>
+                                      <input type="email" class="form-control" 
+                                             id="email" name="email" required maxlength="50">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="email">
+                                        Year of Experience:
+                                    </label>
+                                    <input type="number" class="form-control" 
+                                           id="number" name="number" required maxlength="50">
+                                </div>
+                                  
+                                  <button type="submit" class="btn btn-lg btn-success btn-block" id="btnContactUs">apply</button>
+              
+                              </form>
+                              <div id="success_message" style="width:100%; height:100%; display:none; ">
+                                  <h3>Appied for a job!!</h3>
+                              </div>
+                              <div id="error_message"
+                                   style="width:100%; height:100%; display:none; ">
+                                  <h3>Error</h3>
+                                  Sorry there was an error sending your form.
+              
+                              </div>
+                          </div>
+              
+                      </div>
+              
+                  </div>
+              </div>
+              
+        
+          
+            
+<footer  >
+  <div  class="st1" style="margin-bottom:0; ">
+    <div class="row" >
+    <div class="col-md-6 col-sm-6 col-lg-3">
+      <div class="st2">
+          <p>Menu</p>
+          Home<br />
+          About<br />
+          Services<br />
+          Contact<br />
+     </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-lg-3"> 
+      <div class="st2">
+          <p>Service</p>
+          Retail<br />
+          Manufacturing<br />
+          Healthcare<br />
+          Oil & Gas<br />
+      </div>
+     </div> 
+
+     <div class="col-md-6 col-sm-6 col-lg-3">
+      <div class="st2" style="padding-right:25%;">
+          <p>Contact</p>
+          sales@arwizon.com<br />
+          (080)2655 0099<br />
+          </div>
+      </div>
+          <div class="col-md-6 col-sm-6 col-lg-3"> 
+      <div class="st2">
+          <p>Location</p>
+          Arwizon Digital Private Limited.<br />
+          INDIA|USA<br />
+          </div>
+         
+         </div>
+        </div>
+  </div>
+   
+</footer>
+</div>
+<script>
+
+
+var x=0;
+ function timeCounter(){
+    x = setInterval(count,1000)
+ }
+var countDownDate = new Date("apr 27, 2020 12:56:00").getTime();
+function count()
+{
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    if (distance <=0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "TIME EXPIRED";
+        $("button").hide();
+    }
+    else{
+        console.log(distance);
+        var days= Math.floor(distance / (1000 * 60 * 60 * 24));
+        distance = distance % (1000 * 60 * 60 * 24);
+
+ 
+        var hours = Math.floor(distance / (1000 * 60 * 60));
+        distance = distance % (1000 * 60 * 60);
+
+        var minutes = Math.floor(distance / (1000 * 60));
+        distance = distance % (1000 * 60);
+
+        var seconds = Math.floor(distance / (1000));
+        distance = distance % (1000);
+ 
+ 
+    document.getElementById("demo").innerHTML = "Time ends in:"+"<br>" + days + "d : " + hours + "h : "
+  + minutes + "m : " + seconds + "s ";
+    
+}
+  
+}
+</script>
+
+</body>
+</html>

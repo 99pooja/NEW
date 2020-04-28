@@ -1,0 +1,457 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <style>
+            
+                input
+                {
+                    border:1px solid black;
+
+                }
+                input:invalid{
+                    border:1px solid red;
+
+                }
+                input:valid{
+                    border:1px solid blue;
+
+                }
+                body{
+                background-image:url('../images/arwizon2.jpg');
+                background-repeat:no-repeat;
+                background-size: cover;
+                background-size: 100% 100%;
+                }
+                input[type=radio]:focus{
+            transform:scale(1.5,1.5);
+            }
+            input[type=checkbox]:focus {
+                transform: scale(1.5,1.5);
+            }
+
+
+            .button {
+                color: #fff;
+                font-weight: bold;
+                border-radius: 1rem;
+                background-color: #007bff;
+                border-color: #007bff;
+                text-align: center;
+                padding: 3% 10%;
+                font-size: 1rem;
+                transition: transform 1s;
+            }
+
+                input[type=submit]:hover {
+                    transform: scale(1.2,1.2);
+                    animation-name: submitButton;
+                    animation-duration: 3s;
+                }
+                input[type=reset]:hover {
+                    transform: scale(1.2,1.2);
+                    animation-name: submitButton;
+                    animation-duration: 3s;
+                }
+
+            @keyframes submitButton {
+                0% {
+                    background-color: #007bff;
+                }
+
+                100% {
+                    background-color: red;
+                }
+            }
+
+            form
+            {
+                margin-left: 25%; 
+                margin-right:25%;
+                padding-left:5%;
+                padding-right:5%;
+                padding-top:1%;
+                padding-bottom:1%; 
+                border-radius: 25px; 
+                border: 5px solid navy; 
+                background:azure;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="get" action="welcome.html"  novalidate autocomplete="off" >
+            <center>
+            <h2 style="color:navy;">EMPLOYEE REGISTRATION FORM</h2>
+            </center>
+           
+            <div class="form-group">
+                <label for="exampleInputEmail1">FirstName*</label>
+                <input type="text" class="form-control "  id="name2" name="name"    pattern="[A-Za-z]+"   autocomplete="on" required  ><span id="name1" > </span><br>
+                    
+                <label for="exampleInputEmail1">Last Name*</label>
+                <input type="text" class="form-control "   id="n2" name="name"    pattern="[A-Za-z]+"  required ><span id="n1" > </span><br>
+               
+                    
+                <label for="exampleInputEmail1">FullName*</label>
+                <input type="text" class="form-control "  id="fullname2" name="name" readonly       autocomplete="on" required  ><span id="fullname1" > </span><br>
+                        
+                <label for="exampleInputEmail1">Password*</label>
+                <input type="password" class="form-control "  id="pass2" name="name"  pattern="[A-Z]{1}[A-Za-z0-9@#&*]{7,}"  required ><span id="pass1" > </span><br>
+                    
+                <label for="exampleInputEmail1">Confirm Password*</label>
+                <input type="password" class="form-control "  id="confirm2" name="name"  pattern="[A-Z]{1}[A-Za-z0-9@#&*]{7,}" required  ><span id="confirm1"  > </span><br>
+                                    
+                <label for="exampleInputEmail1">Date of Birth*</label> 
+                <input type="date" class="form-control "   id="dob2" name="dob"  maxlength="10"  required><span id="dob1" required ></span><br>
+               
+                <label for="exampleInputEmail1">Contact Number*</label>
+                <input type="tel" class="form-control " id="number2"   name="number"  pattern="[6-9]{1}[0-9]{9}" maxlength="10" required ><span id="number1" ></span><br>
+            
+                <label for="exampleInputEmail1">Email Address*</label> 
+                <input type="text" class="form-control "       id="email2" name="email"   maxlength="100" pattern="[A-Za-z0-9]+@[A-Za-z]+.(com|in)+" required  ><span id="email1"></span><br>
+       
+
+                <div class="col">
+                    <label class="col-form-label ">Gender:</label>
+                    <div class="form-check form-check-inline">
+                        <input name="gender" class="form-check-input" value="male" type="radio" />male
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="gender" class="form-check-input" value="female" type="radio" />female
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input name="gender" class="form-check-input" value="others" type="radio" />others
+                      
+                    </div>
+                    <span id="radio2"></span>
+                </div>
+                    
+                <div class=" form-inline">
+                    <label for="exampleInputEmail1" class="my-1 mr-2">Your Domain:</label>   
+                    <input type="text" id="slct1" list="branch" onchange="domainCheck()"   placeholder="Entert your B.E branch"  required class="form-control required"><span id="slct2"></span><br>
+                    <datalist id="branch" >
+                    
+                        <option value="Computer Science and Engineering"></option>
+                        <option value="Electronics and Communication Engineering" ></option>
+                        <option value="Information Science and Engineering"></option>
+                        <option value="Mechanical Engineering"></option>
+                        <option value="Electrical and Electronics Engineering"></option>
+                    </datalist> 
+                    <span id="slct" ></span> 
+                </div> 
+
+                <label for="exampleInputEmail1">Address*:</label> <br>
+                <textarea name="address" class="form-control" id="exampleFormControlTextarea1"  onblur="blurMethod(this)" value="address" rows="4" cols="40" required  ></textarea><span></span><br>
+       
+                <label for="exampleInputEmail1">Last Company you Worked for*:</label><br> 
+                <input type="text" class="form-control "   name="company" onblur="blurMethod(this)" autocomplete="on" maxlength="100"  id="company2" pattern="[a-bA-B1-9]+" required  ><span id="company1"></span><br>
+       
+                <label class="col-form-label ">Languages known:</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" name="language" value="kannada" type="checkbox" />kannada
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" name="language" value="english" type="checkbox" />English
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" name="language" value="hindi" type="checkbox" />Hindi
+                </div>
+                <span id="check2"></span><br>
+    
+                <label for="exampleInputEmail1">Upload Your Resume*:</label>  
+                <input type="file" value="resume" name="resume" onchange="fileUpload(this)" required ><span id="file1" ></span><br>
+        
+                <label for="exampleInputEmail1">Comments/Questions:</label> <br>
+                <textarea name="Reference"  class="form-control" id="exampleFormControlTextarea1"   onblur="blurMethod(this)" rows="4" cols="40" required ></textarea><span></span><br>
+        
+            </div>                
+            <center>
+                <input type="submit" style="width:90px;height:30px;border-radius:25px;border:solid blue;" >
+                <input type="reset"  value="Reset" style="width:90px;height:30px; border-radius:25px;border:solid blue; ">
+                
+            </center>
+        </form>
+
+        <script>
+             $(document).ready(
+               
+            function()
+            {
+            $( "input[type=text]" ).focus( function() {
+                
+                   $(this).css({"backgroundColor":"yellow"});
+                });
+                $( "input[type=text]" ).blur( function() {
+                
+                $(this).css({"backgroundColor":"white"});
+             });
+            /* function colorChange()
+                {
+                   var color= document.querySelectorAll("span");
+                   for (var i = 0; i < color.length; i++) {
+                    color[i].style.color="red";
+
+                }
+                }
+            */
+             function radioCheck()
+                {
+                    var radio=document.querySelector("input[type=radio]:checked");
+                    //colorChange();
+                    if(radio==null)
+                        {
+                            document.querySelector("#radio2").textContent=" select your choice";
+                        }
+                    else
+                        {
+                            document.querySelector("#radio2").textContent="";
+                        }
+                }
+                function domainCheck()
+                {
+                    var slct=document.querySelector("#slct1").value;
+                   // colorChange();
+                    if(slct.value==null)
+                        {
+                            document.querySelector("#slct2").textContent="select one option";
+                        }
+                    else{
+                            document.querySelector("#slct2").textContent="";
+                        }
+                }
+                    
+            function checkboxCheck()
+                {
+                    var check = document.querySelector("input[type=checkbox]:checked");
+                    //colorChange();
+                    
+                    if (check == null) {
+                            document.querySelector("#check2").textContent = " Select one choice";
+                        }
+                        else{
+                            document.querySelector("#check2").textContent = "";
+                        }
+                }
+            function fileUpload(obj) {
+                    var file = document.querySelector("input[type=file]");
+                   // colorChange();
+                    console.log(file.files);
+                    for (var i = 0; i < file.files.length;i++){
+                        var size = file.files[i].size;
+                        var f = Math.round((size / 1024));
+                        if (f >= 1000) {
+                            document.querySelector("#file1").textContent =file.files[i].name + "File too big,select file below 1mb";
+                        }
+                        else if (f < 20) {
+                            document.querySelector("#file1").textContent = file.files[i].name + "File too small,select file above 20kb";
+                        }
+                     }
+            }
+    
+           function resumeCheck() {
+                var file = document.querySelector("input[type=file]");
+                //colorChange();
+                if (file == null) {
+                    document.querySelector("#file1").textContent = "Upload a file";
+                }
+                else {
+                    document.querySelector("#file1").textContent = "";
+
+                }
+            }
+            function showNameError()
+                {
+                        if(document.querySelector("#name2").validity.patternMismatch){
+                        document.querySelector("#name1").textContent="pattern mismatch";
+                    }
+                        else if(document.querySelector("#name2").validity.valueMissing){
+                            document.querySelector("#name1").textContent="value missing";
+                    }
+                }
+                
+                function showLnameError()
+                {
+                    if(document.querySelector("#n2").validity.patternMismatch){
+                        document.querySelector("#n1").textContent="pattern mismatch";
+                    }
+                    else if(document.querySelector("#n2").validity.valueMissing){
+                        document.querySelector("#n1").textContent="value missing";
+                    } 
+                    
+                }
+                function showPassError()
+                {
+                        if(document.querySelector("#pass2").validity.patternMismatch){
+                        document.querySelector("#pass1").textContent="pattern mismatch";
+                    }
+                    else if(document.querySelector("#pass2").validity.valueMissing){
+                        document.querySelector("#pass1").textContent="value missing";
+                    }
+                   
+                }
+                function showConfirmError()
+                {
+                        if(document.querySelector("#confirm2").validity.patternMismatch){
+                        document.querySelector("#confirm1").textContent="pattern mismatch";
+                    }
+                    else if(document.querySelector("#confirm2").validity.valueMissing){
+                        document.querySelector("#confirm1").textContent="value missing";
+                    }
+                    
+                }
+                function showNumError()
+                {
+                        if(document.querySelector("#number2").validity.patternMismatch){
+                        document.querySelector("#number1").textContent="pattern mismatch";
+                    }
+                    else if(document.querySelector("#number2").validity.valueMissing){
+                        document.querySelector("#number1").textContent="value missing";
+                    }
+                   
+                       
+                }
+                function showEmailError()
+                {
+                        if(document.querySelector("#email2").validity.patternMismatch){
+                        document.querySelector("#email1").textContent="pattern mismatch";
+                    }
+                    else if(document.querySelector("#email2").validity.valueMissing){
+                        document.querySelector("#email1").textContent="value missing";
+                    }
+                }
+                class Human
+                    {
+                        constructor(fname,lname)
+                        {
+                            this.fname= fname;
+                            this.lname=lname;
+                        }
+                        fullName()
+                        {
+                            console.log("FullName:"+this.fname+" "+this.lname);
+                            document.querySelector("#fullname2").value=this.fname+" "+this.lname;
+                        }
+                    }
+                    class Employee extends Human
+                    {
+                    constructor(fname,lname,email)
+                    {
+                            super(fname,lname)
+                            this.email=email;
+                    
+                    }
+                    displayDetails()
+                    {
+                        console.log(this.fname+" "+this.lname+" "+this.email);
+                        document.querySelector("#name1").textContent=this.fname;
+                        document.querySelector("#n1").textContent=this.lname;
+                        document.querySelector("#email1").textContent=this.email;
+
+                    }
+                    }
+               
+                
+               
+              
+                $("form").submit(
+                    function()
+                    {
+                      
+                      
+                        var span = document.querySelectorAll("span");
+                for (var i = 0; i < span.length; i++) {
+                span[i].textContent="";
+                span[i].style.color="red";
+                
+                }
+                var obj1=new Employee(document.querySelector("#name2").value,document.querySelector("#n2").value,document.querySelector("#email2").value);
+                    obj1.fullName();
+                    obj1.displayDetails();
+               
+                   
+
+                        console.log("alert");
+                        radioCheck();
+                        checkboxCheck();
+                        domainCheck();
+                        resumeCheck();
+                       
+
+                
+                    if(!document.querySelector("#name2").validity.valid)
+                    {
+                       // colorChange();
+                        showNameError();
+                    
+                    }
+                   
+                    if(!document.querySelector("#n2").validity.valid)
+                        {
+                            //colorChange();
+                            showLnameError();
+                       
+                        }
+                    if(!document.querySelector("#pass2").validity.valid)
+                        {
+                            //colorChange();
+                            showPassError();
+                        
+                        }
+                        if(!document.querySelector("#n2").validity.valid)
+                        {
+                            //colorChange();
+                            showLnameError();
+                        
+                        }
+                        if(!document.querySelector("#confirm2").validity.valid)
+                        {
+                           // colorChange();
+                            showConfirmError();
+                        
+                        }
+                        if(!document.querySelector("#number2").validity.valid)
+                        {
+                            //colorChange();
+                            showNumError();
+                        
+                        }
+                        if(!document.querySelector("#email2").validity.valid)
+                        {
+                           // colorChange();
+                            showEmailError();
+                       
+                        }
+                        
+                        var span = document.querySelectorAll("span");
+                        for (var i = 0; i < span.length; i++) {
+                            if(span[i].textContent!="")
+                            {
+                                
+                                return false;
+                                
+                            }
+                            else {
+                                    
+                                continue;
+                            }
+                            
+                        }
+                        
+                        return true;
+                                    
+            
+
+                    });
+                
+            });
+
+          
+       
+        </script>
+    </body>
+</html>

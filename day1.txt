@@ -1,0 +1,64 @@
+Day-1 (15/04/2020)
+Web basics
+client server model
+HTTP protocol
+HTML syntax and elements-ol,ul,marquee,p,div,h1-h6,img,a,table etc
+HTML attributes-style,rowspan,colspan,id,class,etc
+CSS Prpopertis-Background-color,height,width,background-color
+Forms-textbox,radio,dropdown,checkbox,textarea,date,time,color,submt,reset
+Form attributes-name,value,action,multiple,selected,checked,mthd,placeholder,size,maxlen,min len
+Assignmnt:arwizon reg form,method,target,readonly,disabled,target,multiple
+
+
+Day-2 (16/04/2020)
+html5 new form attributes ie required,autocomplete,autofocus,pattern etc
+Regular expression
+css combinators
+various css prperties ie position,display etc
+ pseudo classes ie hover,focus,link, visited,active,nth-child
+css pseudo elements ie selection,before-line,after line,before,after,first-
+semantic elements ie header,footer,article,section,nav,main,ficgure etc
+datalist elements in html5
+audio/vedio features of html5
+
+assignmnt:arwizon website using html5 and css3 properties, highlight the option in datalist tag,audio vedio feaTture.
+	modify the reg form with html5 attributes(link with arwizon website)
+after successful reg land into welcome page.
+
+
+Day3(17/04/2020)
+https://resizeimage.net/
+
+css3 properties :transformation(scale,translate,rotate,skew),transition(delay,duration),Animation(@keyframes)
+boxsizing
+gradients
+backgrnd-origin,size,image
+html5 att:min&max,step.
+bootstrap:overview,implementation,container
+contents:carousel,indicators,crossfade,forms,buttons,navbar,dropdowns
+classes used for table
+
+
+assignmnt:convrt the form using bootstrap classes like form-grp
+implement carousel having animated text
+implement card component as per your creativity
+
+
+Day4(18/04/2020)
+
+grid system in bootstrap to make page responsive,offset
+media queries in css3 to make page responsive
+bootstrap components:alert,modal,breadcrump,progress bar
+glyphicons,typography
+nav bar modal does not work.
+
+assignmnt :work on the arwizon website
+
+
+ 
+
+
+
+
+
+

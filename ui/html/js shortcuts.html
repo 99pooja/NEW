@@ -1,0 +1,471 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+        
+        
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <style>
+            
+            input
+            {
+                border:1px solid black;
+
+            }
+            input:invalid{
+                border:1px solid red;
+
+            }
+            input:valid{
+                border:1px solid blue;
+
+            }
+            body{
+            background-image:url('../images/arwizon2.jpg');
+             background-repeat:no-repeat;
+             background-size: cover;
+             background-size: 100% 100%;
+            }
+            input[type=radio]:focus{
+           transform:scale(1.5,1.5);
+        }
+        input[type=checkbox]:focus {
+            transform: scale(1.5,1.5);
+        }
+
+
+        .button {
+            color: #fff;
+            font-weight: bold;
+            border-radius: 1rem;
+            background-color: #007bff;
+            border-color: #007bff;
+            text-align: center;
+            padding: 3% 10%;
+            font-size: 1rem;
+            transition: transform 1s;
+        }
+
+            .button:hover {
+                transform: scale(1.2,1.2);
+                animation-name: submitButton;
+                animation-duration: 3s;
+            }
+
+        @keyframes submitButton {
+            0% {
+                background-color: #007bff;
+            }
+
+            100% {
+                background-color: red;
+            }
+        }
+
+           
+            </style>
+
+
+
+            </head>
+<body  onload="visitCount()"> 
+
+
+    <span id="count"></span>
+        <form method="post" action="welcome.html" onsubmit=" return submitCheck()" autocomplete="off" style="margin-left: 25%; margin-right:25%;padding-left:5%;padding-right:5%;padding-top:1%;padding-bottom:1%; border-radius: 25px; border: 5px solid navy; background:azure;">
+        
+           <center>
+           
+                <h2 style="color:navy;">EMPLOYEE REGISTRATION FORM</h2>
+            </center>
+           
+                <div class="form-group">
+                    <label for="exampleInputEmail1">FirstName*</label>
+                    <input type="text" class="form-control "    id="name2" name="name" onchange="fnameCheck()"  onfocus="focusMethod(this)" onblur="blurMethod(this)"    autocomplete="on"  ><span id="name1" required > </span><br>
+                    
+               
+               
+                    <label for="exampleInputEmail1">Last Name*</label>
+                    <input type="text" class="form-control " required   id="n2" name="name" onfocus="focusMethod(this)" onchange="lnameCheck()" onblur="blurMethod(this)" ><span id="n1" > </span><br>
+               
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">FullName*</label>
+                        <input type="text" class="form-control" required  id="fullname2" name="name" readonly  onfocus="focusMethod(this)" onblur="blurMethod(this)"    autocomplete="on"   ><span id="fullname1" > </span><br>
+                        
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Password*</label>
+                            <input type="password" class="form-control " required  id="pass2" name="name" onchange="passwordCheck(this)"  onfocus="focusMethod(this)" onblur="blurMethod(this)"     ><span id="pass1" > </span><br>
+                    
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Confirm Password*</label>
+                                <input type="password" class="form-control "  required id="confirm2" name="name" onchange="confirmCheck(this)"  onfocus="focusMethod(this)" onblur="blurMethod(this)"    ><span id="confirm1" > </span><br>
+                                        
+              
+                <label for="exampleInputEmail1">Date of Birth*</label> 
+                <input type="date" class="form-control "   id="dob2" name="dob" required onfocus="focusMethod(this)" onblur="blurMethod(this)" maxlength="10"  ><span id="dob1" ></span><br>
+               
+            
+            
+            
+        
+            <label for="exampleInputEmail1">Contact Number*</label>
+            <input type="tel" class="form-control " id="number2"   name="number"  required onchange="numberCheck(this)" onfocus="focusMethod(this)" onblur="blurMethod(this)" maxlength="10"  ><span id="number1"></span><br>
+           
+           
+
+       
+            <label for="exampleInputEmail1">Email Address*</label> 
+                <input type="text" class="form-control "  required     id="email2" name="email" onchange="emailCheck(this)" onfocus="focusMethod(this)" onblur="blurMethod(this)"  maxlength="100"   ><span id="email1"></span><br>
+       
+
+                
+                    <div class="col">
+                        <label class="col-form-label ">Gender:</label>
+                        <div class="form-check form-check-inline">
+                            <input name="gender" class="form-check-input" value="male" type="radio" />male
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input name="gender" class="form-check-input" value="female" type="radio" />female
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input name="gender" class="form-check-input" value="others" type="radio" />others
+<span id="radio2"></span>
+                        </div>
+                    </div>
+                    
+
+        <div class=" form-inline">
+            <label for="exampleInputEmail1" class="my-1 mr-2">Your Domain:</label>   
+         <input type="text" id="slct1" list="branch" onchange="domainCheck()" required   placeholder="Entert your B.E branch" onfocus="focusMethod(this)" onblur="blurMethod(this)"  class="form-control "><span id="slct2"></span><br>
+          <datalist id="branch" >
+             
+             <option value="Computer Science and Engineering"></option>
+             <option value="Electronics and Communication Engineering" ></option>
+             <option value="Information Science and Engineering"></option>
+             <option value="Mechanical Engineering"></option>
+             <option value="Electrical and Electronics Engineering"></option>
+            
+         </datalist> 
+         <span id="slct" ></span> 
+        </div> 
+
+         
+            <label for="exampleInputEmail1">Address*:</label> <br>
+            <textarea name="address" class="form-control" id="exampleFormControlTextarea1" required onfocus="focusMethod(this)" onblur="blurMethod(this)" value="address" rows="4" cols="40"  ></textarea><span></span><br>
+       
+
+      
+        <label for="exampleInputEmail1">Last Company you Worked for*:</label><br> 
+
+            <input type="text" class="form-control " onchange="companyCheck(this)"  required name="company" onfocus="focusMethod(this)" onblur="blurMethod(this)" autocomplete="on" maxlength="100"  id="company2"  ><span id="company1"></span><br>
+       
+
+            
+            
+            <div class="form-group">
+                <label class="col-form-label ">Languages known:</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" name="language" value="kannada" type="checkbox" />kannada
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" name="language" value="english" type="checkbox" />English
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" name="language" value="hindi" type="checkbox" />Hindi
+                    
+                </div></br>
+                <span id="check2"></span>
+    
+            </div>
+           
+    
+        
+               
+             
+           
+            <label for="exampleInputEmail1">Upload Your Resume*:</label>  
+            <input type="file" value="resume" name="resume" onchange="fileUpload(this)" required  ><span id="file1"></span><br>
+        
+
+        
+                <label for="exampleInputEmail1">Comments/Questions:</label> <br>
+            <textarea name="Reference"  class="form-control" id="exampleFormControlTextarea1" required  onfocus="focusMethod(this)" onblur="blurMethod(this)" rows="4" cols="40" ></textarea><span></span><br>
+        <center>
+        </div>  
+
+            
+            <input type="submit" style="width:90px;height:30px;border-radius:25px;" >
+              
+             
+        
+              
+            <input type="reset"  class="btn btn-primary" value="Reset" style="width:90px;height:30px; border-radius:25px; ">
+         <button type="button" onclick="clickme();" style="width:90px;height:30px;border-radius:25px;" >click</button>
+      
+    </center>
+</form>
+
+
+
+
+<script>
+    
+ 
+
+
+   
+
+    function focusMethod(obj)
+    {
+obj.style.backgroundColor="yellow";
+    }
+
+    
+    function blurMethod(obj){
+    obj.style.backgroundColor="white";
+        }
+    var namepattern="^[A-Za-z]+$";
+    function fnameCheck()
+    {
+            var firstname=document.querySelector("#name2").value;
+            if(firstname.search(namepattern)==0)
+            {
+                document.querySelector("#name1").textContent="";
+            }
+                else{
+                    document.querySelector("#name1").textContent="You can have only alphabets";
+                }
+            
+
+    }
+    function lnameCheck()
+    {
+        var lastname=document.querySelector("#n2").value;
+            if(lastname.search(namepattern)==0)
+            {
+                document.querySelector("#n1").textContent="";
+            }
+                else{
+                    document.querySelector("#n1").textContent="You can have only alphabets";
+                }
+    }
+
+
+    passwordpattern="^[A-Z]{1}[A-Za-z0-9@#&*]{7,}$";
+    function passwordCheck(obj)
+        {
+        var password=obj.value;
+        if(password.search(passwordpattern)==0)
+        {
+            document.querySelector("#pass1").textContent="";
+        }
+        else
+        {
+            document.querySelector("#pass1").textContent="Invalid format";
+        }
+
+        }
+        function confirmCheck(obj)
+            {
+                var confirm=obj.value;
+            if(confirm.search(passwordpattern)==0)
+            {
+                document.querySelector("#confirm1").textContent="";
+            }
+            else
+            {
+                document.querySelector("#confirm1").textContent="Invalid format";
+            }
+
+            }
+
+        
+
+   numberpattern="^[6-9]{1}[0-9]{9}$";
+    function numberCheck(obj)
+            {
+                var num=obj.value;
+            if(num.search(numberpattern)==0)
+            {
+                document.querySelector("#number1").textContent="";
+            }
+            else
+            {
+                document.querySelector("#number1").textContent="Invalid format";
+            }
+
+            }
+
+emailpattern="^[A-Za-z0-9]+@[A-Za-z]+.(com|in)+$"
+    function emailCheck(obj)
+    {
+        
+                var email=obj.value;
+            if(email.search(emailpattern)==0)
+            {
+                document.querySelector("#email1").textContent="";
+            }
+            else
+            {
+                document.querySelector("#email1").textContent="Invalid format";
+            }
+
+            }
+
+
+   companypattern="^[a-zA-Z0-9]+$";
+    function companyCheck(obj)
+    {
+            
+        var company=obj.value;
+            if(company.search(companypattern)==0)
+            {
+                document.querySelector("#company1").textContent="";
+            }
+            else
+            {
+                document.querySelector("#company1").textContent="Invalid format";
+            }
+
+            
+
+
+    }
+    function radioCheck()
+    {
+        var radio=document.querySelector("input[type=radio]:checked");
+        if(radio==null)
+        {
+            document.querySelector("#radio2").textContent="select your choice";
+        }
+        else
+        {
+            document.querySelector("#radio2").textContent="";
+        }
+    }
+        function domainCheck()
+                {
+            var slct=document.querySelector("#slct1").value;
+            if(slct.value=="")
+            {
+                document.querySelector("#slct2").textContent=" select one option";
+            }
+            else{
+                document.querySelector("#slct2").textContent="";
+            }
+                    }
+                    
+        function checkboxCheck()
+        {
+            var check = document.querySelector("input[type=checkbox]:checked");
+                if (check == null) {
+                    document.querySelector("#check2").textContent = " Select one choice";
+                }
+                else{
+                    document.querySelector("#check2").textContent = "";
+            }
+        }
+    function fileUpload(obj) {
+            var file = document.querySelector("input[type=file]");
+            console.log(file.files);
+            for (var i = 0; i < file.files.length;i++){
+                var size = file.files[i].size;
+                 var f = Math.round((size / 1024));
+                if (f >= 1000) {
+                   document.querySelector("#file1").textContent =file.files[i].name + "File too big,select file below 1mb";
+                }
+                else if (f < 20) {
+                    document.querySelector("#file1").textContent = file.files[i].name + "File too small,select file above 20kb";
+                 }
+
+           }
+    }
+    
+           function resumeCheck() {
+            var file = document.querySelector("input[type=file]");
+            if (file == null) {
+                document.querySelector("#file1").textContent = "Upload a file";
+            }
+            else {
+                document.querySelector("#file1").textContent = "";
+
+            }
+        }
+       
+        
+        function submitCheck() {
+            if (typeof(Storage) !="undefined") {
+  
+             localStorage.setItem("firstname", document.querySelector('#name2').value);
+
+ 
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+           
+            radioCheck();
+            checkboxCheck();
+            LastName();
+            resumeCheck();
+            
+           var span = document.querySelectorAll("span");
+           for (var i = 0; i < span.length; i++) {
+               if(span[i].textContent!="")
+               {
+                   return false;
+                   
+               }
+               else {
+                    
+                   continue;
+               }
+               
+           }
+           return true;
+
+           
+       }
+
+    
+
+
+  function clickme()
+   {
+   
+     document.querySelector("#name1").textContent= " You entered a first name as "+document.querySelector("#name2").value;
+      document.querySelector("#n1").textContent= " You entered a last name as "+document.querySelector("#n2").value;
+      document.querySelector("#fullname2").value=document.querySelector("#name2").value+" "+document.querySelector("#n2").value;
+      document.querySelector("#dob1").textContent= " You entered a DOB as "+document.querySelector("#dob2").value;
+      document.querySelector("#number1").textContent= " You entered phone number as "+document.querySelector("#number2").value;
+      document.querySelector("#email1").textContent= " You entered email as "+document.querySelector("#email2").value;
+     document.querySelector("#radio2").textContent= " You are selected "+document.querySelector("input[type=radio]:checked").value;
+     var a="";
+     var arr=document.querySelectorAll("input[type=checkbox]:checked");
+    
+for (var i = 0; i < arr.length-1; i++) {
+a=a+arr[i].value+",";
+}
+
+a=a+arr[i].value;
+document.querySelector("#check2").textContent= "  You are selected "+ a;    
+ 
+document.querySelector("#slct2").textContent= " You are selected "+document.querySelector("#slct1").value;
+document.querySelector("#company1").textContent= " You are entered "+document.querySelector("#company2").value;
+
+var e=document.querySelectorAll('span');
+
+for(var i=0;i<e.length;i++)
+{
+    e[i].style.color="blue";
+}       
+
+
+ }
+    
+
+   </script>
+
+</body>
+</html>

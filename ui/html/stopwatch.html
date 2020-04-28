@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button id="btn1">start</button>
+        <button id="btn2">stop</button>
+        <script>
+            document.querySelector("#btn1").addEventListener("click", startTimer);
+            document.querySelector("#btn2").removeEventListener("click", stopTimer);
+            
+            
+                   
+
+
+            
+            function startTimer()
+            {
+                
+               var t=setInterval(sec,1000)
+
+                console.log(t);
+            }
+            function stopTimer()
+            {
+            clearTimeout(t);
+            }
+        </script>
+    </body>
+</html>

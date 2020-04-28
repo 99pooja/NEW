@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <title>Arwizon Website</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+     .card-body {
+      cursor: pointer;
+     
+      position: relative;
+      
+      
+      text-align:center;
+      }
+      
+     
+     
+    </style>
+  </head>
+  <body>
+    
+    
+    
+    <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="card " style="display:inline-block;background-size: cover;background-color: #81d4fa;color:black; height:100%; ">
+                <div class="card-title" style="background-color:black;color:white; height:50px;">Retail</div>
+                <div  class="card-body ">
+                   
+                    <img  class="card-img"src="../images/services11.png" alt="tile3">
+                    
+                     <div class="fadedbox"> 
+                  <p  class=" card-text title text">Arwizon Digital helps automotive manufacturers increase productivity and accelerate revenue growth through innovative solutions that improve the overall efficiency, reduce inventory and enable better reporting.</div>
+         </div>
+         </div>
+         </div>
+         
+        
+      <div class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card" style="display:inline-block;background-size: cover;background-color:#0c5391;color:white; height:100%; margin-top:5px;">
+            <div class="card-title" style="background-color:black;color:white; height:50px;">Oil & Gas</div>
+            <div  class="card-body">
+                <img  class="card-img" src="../images/services11.png" alt="tile3" alt="house" />
+                <div id="p">
+                <p class="card-text" style="z-index:-1;">Arwizon Digital has an excellent track record of successfully delivering projects in the O&G (oil and gas) industry. Our clients largely benefit from Maximization of their assets, Improved efficiency,Improved Master data</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script>
+      $(document).ready(
+      function()
+      {
+        $(".card-text").hide();
+        $( "img" ).click(function() {
+          $(".card-text").show();
+  $( this ).animate({
+   
+   
+    height: "0"})
+ 
+    
+  });
+
+  $( "#p" ).click(function() {
+   
+    $( this ).animate({
+   
+   
+   height: "0"})
+         
+   $("img").show();
+         
+   
+  });
+});
+</script>
+  </body>
+</html>

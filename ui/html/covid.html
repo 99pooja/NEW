@@ -19,6 +19,13 @@
         tr:nth-child(even) 
             {background-color: #f2f2f2;
             }
+            tr:last-child
+            {
+                font-weight: bold;
+                background-color:#bbecec;
+                height:50px;
+            padding: 15px;
+            }
             td{
                 height:30px;  
                 padding: 7px;
@@ -28,13 +35,15 @@
  
         width: 25%;
         font-size: 16px;
-        padding: 12px 20px 12px 40px;
+       padding-top:10px;
+       padding-bottom:10px;
         border: 1px solid #ddd;
         margin: 12px;
             }
         button {
             background-color: #4CAF50;
-            
+            padding-top:8px;
+        padding-bottom:8px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -49,8 +58,8 @@
 
     <body onload="send()">
         <center><h1>COVID-19 Updates</h1></center>
-        <button type="button" onclick="send()" style="padding: 10px;float:right; margin: 12px;">Display all</button>
-        <button type="button" onclick="search()" style="padding: 10px;float:right; margin: 12px;">search</button>
+        <button type="button" onclick="send()" style="float:right; margin: 12px;">Display all</button>
+        <button type="button" onclick="search()" style="float:right; margin: 12px;">search</button>
         <input type="text" id="name" name="name">
         
         <center>
@@ -64,7 +73,6 @@
             <th>Delta recovered</th>
             <th>Last updated time</th>
             <th>Recovered</th>
-            x
             <th>State code</th>
             
             </table>
@@ -101,7 +109,7 @@
                 table = document.querySelector("#table1");
                 tr = table.getElementsByTagName("tr");
                 for (var i = 0; i <  obj.statewise.length; i++) {
-                    if (obj.statewise[i].state.toLowerCase().indexOf(filterName) > -1) {    
+                    if (obj.statewise[i].state.toUpperCase().indexOf(filter) > -1) {    
                         $(this).show();
                     } else {
                         $(tr[i+1]).hide();
